@@ -16,7 +16,7 @@ var root = path.resolve(process.argv[2] || '../Resources');
 console.log('Static root dir: ' + root);
 // create a server:
 var server = http.createServer(function (request,response) {
-    // gey the path of the url
+    // get the path of the url
     var pathname =url.parse(request.url).pathname;
     // get the current path
     var filepath = path.join(root,pathname);
