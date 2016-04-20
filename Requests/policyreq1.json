@@ -1,7 +1,7 @@
 {
   "subject": {
     "category": "access-subject",
-    "role": "pc-chair"
+    "role": "admin"
   },
   "resource":{
     "isPending": "false",

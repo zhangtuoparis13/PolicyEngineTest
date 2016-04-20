@@ -30,9 +30,8 @@ var policyDecision ={
     parameter_Null: null,
     'project-name': '\"W3C\" reTHINK',
     response1: ['Decision'],
-    response2: {
-        Decision:['Permit']
-    },
+    response2: [ { Decision: 'Permit' } ],
+
     toJSON: function () {
         return { // just output the response , and change the key at the same time
             'Request1': this.request1,
