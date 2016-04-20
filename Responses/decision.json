@@ -1,0 +1,11 @@
+{
+ "Request1": "Done",
+ "Response1": [
+  "Decision"
+ ],
+ "Response2": {
+  "Decision": [
+   "Permit"
+  ]
+ }
+}
