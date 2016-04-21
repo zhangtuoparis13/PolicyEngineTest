@@ -1,0 +1,13 @@
+{
+  "subject": {
+    "category": "access-subject",
+    "role": "alice"
+  },
+  "resource":{
+    "isPending": "true",
+    "resource-id": "DEFAULT RESOURCE"
+  },
+  "action":{
+    "action-type" : "write"
+  }
+}

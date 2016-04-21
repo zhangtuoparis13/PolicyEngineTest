@@ -28,8 +28,8 @@ var policyDecision ={
     parameter_float: 1.65,
     parameter_Null: null,
     'project-name': '\"W3C\" reTHINK',
-    response_positive: [ { Decision: 'Permit' } ],
-    response_negative: [ { Decision: 'Deny' } ],
+    response_positive: { Response: [ { Decision: 'Permit' } ] },
+    response_negative: { Response: [ { Decision: 'Deny' } ] },
     toJSON: function () {
         return { // just output the response , and change the key at the same time
             'Response': this.response_positive
@@ -74,12 +74,12 @@ rs.on('data', function (chunk) {
             if (compare(jsonContent.subject.role, policyContent.target.subjects.subject.role)) {
                 console.log('The same Role.');
                 var ws_permit = fs.createWriteStream(resPath, 'utf-8');
-                ws_permit.write(JSON.stringify(policyDecision, null, ' '));
+                ws_permit.write(JSON.stringify(policyDecision.response_positive, null, ' '));
                 ws_permit.end();
             } else {
                 console.log('Not the same Role.');
                 var ws_deny = fs.createWriteStream(resPath, 'utf-8');
-                ws_deny.write(JSON.stringify(policyDecision, null, ' '));
+                ws_deny.write(JSON.stringify(policyDecision.response_negative, null, ' '));
                 ws_deny.end();
             }
         }

@@ -1,0 +1,13 @@
+{
+  "subject": {
+    "category": "access-subject",
+    "role": "bob"
+  },
+  "resource":{
+    "isPending": "true",
+    "resource-id": "DEFAULT RESOURCE"
+  },
+  "action":{
+    "action-type" : "read"
+  }
+}
